@@ -27,9 +27,11 @@
 
         <div class="Mid">
             <div class="columna1">
-                <div class="hid">CUENTA REGRESIVA</div>
-                <div class="divBoton">
-                    <button class="BotonFBI">In case of FBI</button>
+                <div class="top1">
+                    <div class="hid"></div>
+                    <div class="divBoton">
+                        <button id="botn" class="BotonFBI">In case of FBI</button>
+                    </div>
                 </div>
                 <div class="divFotoAlien"><img class="fotoAlien" src="https://m.media-amazon.com/images/M/MV5BZGYwYmVkZWMtNWY5ZS00NjhiLWE4ZGQtYTAzMzAzYWE2OGE4XkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_.jpg" alt=""></div>
                 <h2 class="textMind">Anti-Mind Reader</h2>
@@ -73,23 +75,41 @@
     </div>
     <script>
         
-        const info=()=>{
-            $.ajax({
-                type:'GET',
-                url:'extra.html',
-                contentType: "html",
-                succes:function(data){
-                    consol.console.log(data);
-                }
+     
 
-            })
-        }
-
-        $(document).ready(function(){
-
+    
+        $(document).ready(function($){
         let hiddenBox = $( ".hid" );
-        $( ".BotonFBI" ).on( "click", function(){
+        let bot = $( "#botn" );
+
+        // Funcion usando ajax para hacer GET al HTML 
+        $.get("extra.html", function(data){
+            $(".hid").append(data);
+        })
         hiddenBox.toggle();
+/*
+        const changeName =(boton)=>{
+            hiddenBox.toggle();
+            if(bot.v)
+        }
+  */      
+        // Al hacer click, se llama a la funcion getFun() y se muestra el div
+        // con la info del html que se trajo
+        bot.on( "click", function(){
+            hiddenBox.toggle();
+            if(bot.text() === "In case of FBI"){
+                bot.text("Abort!");
+                bot.removeClass("BotonFBI");
+                bot.addClass("abort");
+            }else{
+                bot.text("In case of FBI");
+                bot.removeClass("abort");
+                bot.addClass("BotonFBI");
+            }
+            
+            
+        
+        //$(".BotonFBI").prop("disabled", true); // Desactivamos el boton
         });
 
         });
