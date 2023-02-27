@@ -27,8 +27,8 @@
 
         <div class="Mid">
             <div class="columna1">
+                <div class="hid">CUENTA REGRESIVA</div>
                 <div class="divBoton">
-                    <div class="reloj">CUENTA REGRESIVA</div>
                     <button class="BotonFBI">In case of FBI</button>
                 </div>
                 <div class="divFotoAlien"><img class="fotoAlien" src="https://m.media-amazon.com/images/M/MV5BZGYwYmVkZWMtNWY5ZS00NjhiLWE4ZGQtYTAzMzAzYWE2OGE4XkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_.jpg" alt=""></div>
@@ -73,9 +73,21 @@
     </div>
     <script>
         
+        const info=()=>{
+            $.ajax({
+                type:'GET',
+                url:'extra.html',
+                contentType: "html",
+                succes:function(data){
+                    consol.console.log(data);
+                }
+
+            })
+        }
+
         $(document).ready(function(){
 
-        let hiddenBox = $( ".reloj" );
+        let hiddenBox = $( ".hid" );
         $( ".BotonFBI" ).on( "click", function(){
         hiddenBox.toggle();
         });
