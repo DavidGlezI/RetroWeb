@@ -1,0 +1,247 @@
+
+
+body, html{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin: 0;
+    border: 0;
+    width: 0;
+}
+*{
+
+    background-image: url("https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg");
+    color: white;
+    font-family: 'Alien', sans-serif;
+}
+
+.Container{
+    display: grid;
+    grid-template-columns: 1600px;
+    grid-template-rows: 200px 1250px 50px;
+}
+
+.Top{
+    display: grid;
+    grid-template-columns: 1400px 400px;
+    grid-template-rows: 110px 50px;
+    justify-items: center;
+    grid-template-areas: 
+    "titulo gif"
+    "nav gif" ;
+}
+
+.Gif{
+    grid-area: gif;
+}
+
+.Gif img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+.Titulo{
+    grid-area: titulo;
+    margin:0;
+    display: flex;
+    align-items: center;
+    font-size: 100px;
+    color: greenyellow;
+}
+
+.navigation{
+    grid-area: nav;
+    display: flex;
+    border: solid;
+}
+.NavLinks{
+    
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.NavLinks li{
+    list-style: none;
+    align-items: start;
+    font-size: 35px;
+    background-color: transparent;
+}
+
+
+.Mid{
+    display: grid;
+    grid-template-columns: 600px 900px 300px;
+    grid-template-rows: 1250px;
+}
+
+.columna1{
+    display:grid;
+    grid-template-rows: 100px 350px 50px 400px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.columna2{
+    display:grid;
+    grid-template-rows: 0.2fr 0.8fr 0.2fr 0.8fr 0.1fr 0.2fr;
+    margin-left: 40px;
+
+}
+.outside{
+    display: inline-grid;
+    grid-template-columns: 220px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.columna3{
+    display:grid;
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(3,300px);
+    border: solid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.resize{
+    height: auto;
+    width: 100%;
+}
+
+.fotoAd img{
+    height: auto;
+    width: 100%;
+}
+.Bot{
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-top: 40px;
+    
+}
+
+.divFotoAlien{
+    border: solid;
+    display: grid;
+}
+.fotoAlien{
+    height: auto;
+    width: 100%;
+}  
+
+.divFotoMind{
+    border: solid;
+    display: grid;
+}
+.divFotoMind img{
+    height: auto;
+    width: 100%;
+}
+
+.textMind{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color:greenyellow;
+}
+
+.texto{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color:greenyellow;
+}
+.textoBob{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 25px;
+    color:greenyellow;
+}
+
+.item a{
+    color:yellow;
+}
+
+.textoP{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.textoAlienEv{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 25px;
+    color:greenyellow;
+}
+
+.textoP2{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 25px;
+    color:yellow;
+}
+
+.Bot a{
+    color: yellow;
+}
+
+.divBoton{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 6rem;
+}
+
+.BotonFBI{
+    
+    color: yellow;
+    font-size: 35px;
+    padding: 0;
+    border: none;
+    background: none;
+    padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  width: 200px;
+}
+
+
+.BotonFBI:hover{
+    color: yellowgreen;
+}
+
+.BotonFBI:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
